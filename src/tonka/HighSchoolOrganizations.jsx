@@ -7,11 +7,9 @@ function HighSchoolOrganizations() {
       period: '2020 – 2023',
       role: 'Deputy Editor, Arts and Entertainment',
       description: [
-        'Managed staff writers and collaborated with other editors to publish monthly issues',
-        'Created digital art and designed page layouts with Adobe InDesign',
-        'Interviewed students, teachers, and professionals for articles',
+        'Managed team of staff writers and collaborated with editor team to publish monthly issues for over 3000 readers',
+        'Interviewed students, teachers, + professionals, wrote monthly articles, created digital art, designed pages, and edited the works of the rest of the staff',
         'Participated in the 2022 JEA/NSPA National High School Journalism Conference in St. Louis',
-        'Previously served as staff writer and copy editor'
       ]
     },
     {
@@ -19,9 +17,9 @@ function HighSchoolOrganizations() {
       period: '2022 – 2023',
       role: 'Founder',
       description: [
-        'Launched music tutoring program connecting younger orchestra students with upperclassmen musicians',
-        'Led recruitment, outreach, and marketing',
-        'Over 1000 minutes of lessons provided during the 2022–2023 school year'
+        'Launched program to connect freshmen orchestra students without private music teachers with lessons from upperclassmen musicians',
+        'Led recruitment, outreach, and marketing efforts to attract students, tutors, and parents',
+        'Over 1000 minutes of lessons were provided to students by tutors during the 2022-2023 school year'
       ]
     },
     {
@@ -29,11 +27,10 @@ function HighSchoolOrganizations() {
       period: '2021 – 2023',
       role: 'Lead, Language and Power Team • Senior Writing Coach',
       description: [
-        'Coached peers on writing and staffed reception desk',
-        'Contributed over 60 service hours',
-        'Received Writing Center Exemplary Service Award (2023)',
-        'Led Language and Power team and organized letter-writing campaign',
-        'Conducted inquiry project on improving ELL student experiences'
+        'Spent over 60 hours coaching peers on their writing and staffing Writing Center reception desk',
+        'Organized a letter-writing campaign in 2022 to elected officials in Minnesota ',
+        'Designed research project on how to improve the experiences of ELL students in the Writing Center. Conducted student interviews + mock coachings and presented findings at information session',
+        'Received Writing Center Exemplary Service Award for contributions to students and leadership team'
       ]
     },
     {
@@ -49,8 +46,8 @@ function HighSchoolOrganizations() {
       period: '2022 – 2023',
       role: 'Member',
       description: [
-        'Worked with administration to improve course registration',
-        'Collected feedback and presented recommendations'
+        'Improved the course registration process by minimizing the amount of course drops/changes',
+        'Distributed surveys, collected feedback, and presented ideas for administrative approval and implementation'
       ]
     },
     {
@@ -66,8 +63,8 @@ function HighSchoolOrganizations() {
       period: '2022 – 2023',
       role: 'Member',
       description: [
-        'Collaborated with administration on cultural inclusion initiatives',
-        'Created educational materials promoting awareness of cultural holidays'
+        'Collaborated with students and school administration to improve cultural sensitivity in the classroom',
+        'Created materials to promote cultural holidays and awareness of social issues'
       ]
     },
     {

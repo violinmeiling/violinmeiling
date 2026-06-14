@@ -160,14 +160,7 @@ function MultiTabSection() {
           'Re-designed and managed website and created social media content'
         ]
       },
-      {
-        section: 'Flight Data and Research Engineer (Jan 2024 - Apr 2026 · 2 yrs 4 mos)',
-        bullets: [
-          'Developed Arduino software and configured environmental sensors, solar cells, and electronics to capture data during flight',
-          "Designed and conducted project to determine the effects of altitude on solar cell efficiency through analysis of flight data; results presented at American Meteorological Society's 2026 Symposium"
-        ]
-      },
-      {
+       {
         section: 'High-Altitude Balloon Director (Aug 2024 - May 2025 · 10 mos)',
         bullets: [
           'Led an engineering team of over 20 members for two launches of our high-altitude balloon payload',
@@ -175,7 +168,15 @@ function MultiTabSection() {
           'Managed team budget, supply purchasing, and storage; outlined deliverables, collaborated with project leads, led weekly team meetings',
           'Led recruitment and marketing operations that resulted in the highest number of applications seen by the team since the pandemic -- 22.5% increase from the previous year'
         ]
-      }
+      },
+      {
+        section: 'Flight Data and Research Engineer (Jan 2024 - Apr 2026 · 2 yrs 4 mos)',
+        bullets: [
+          'Developed Arduino software and configured environmental sensors, solar cells, and electronics to capture data during flight',
+          "Designed and conducted project to determine the effects of altitude on solar cell efficiency through analysis of flight data; results presented at American Meteorological Society's 2026 Symposium"
+        ]
+      },
+     
     ],
     period: 'Jan 2024 - May 2026'
   },
@@ -203,15 +204,6 @@ function MultiTabSection() {
         ]
       },
       {
-        section: 'Software Developer (Feb 2024 - Apr 2026 · 2 yrs 3 mos)',
-        bullets: [
-          '[SPRING 26] Developed mobile app for social media platform Dewey with React Native, Expo, and Supabase',
-          '[SPRING 25] Developed a companion app for Penn Museum\'s Into the Blue Student Exhibition, an interactive guided experience that ran from 2025 to 2026 and was projected to reach over 1000 visitors. Used NextJS to develop the frontends of a camera capture and a stickerboard feature for a scavenger hunt that guides users around various blue objects in the museum',
-          '[FALL 24] Used React Native for frontend development on a mobile app to encourage sustainable transportation use in Philadelphia by gamifying user environmental impacts and crowdsourcing information about safety and accessibility on sustainable routes',
-          '[SPRING 24] Developed web application to convert user-uploaded images to interactive 3D object models with photogrammetry. Implemented image upload pipeline from client to iOS Object Capture backend and model retrieval from Amazon S3'
-        ]
-      },
-      {
         section: 'Vice President External (Aug 2024 - May 2025 · 10 mos)',
         bullets: [
           'Led recruitment, marketing, and social media operations',
@@ -221,7 +213,17 @@ function MultiTabSection() {
           'Piloted new product development track to strengthen Spark\'s impact on off-campus community spaces',
           'Created sponsorship packet materials for corporate outreach'
         ]
-      }
+      },
+      {
+        section: 'Software Developer (Feb 2024 - Apr 2026 · 2 yrs 3 mos)',
+        bullets: [
+          '[SPRING 26] Developed mobile app for social media platform Dewey with React Native, Expo, and Supabase',
+          '[SPRING 25] Developed a companion app for Penn Museum\'s Into the Blue Student Exhibition, an interactive guided experience that ran from 2025 to 2026 and was projected to reach over 1000 visitors. Used NextJS to develop the frontends of a camera capture and a stickerboard feature for a scavenger hunt that guides users around various blue objects in the museum',
+          '[FALL 24] Used React Native for frontend development on a mobile app to encourage sustainable transportation use in Philadelphia by gamifying user environmental impacts and crowdsourcing information about safety and accessibility on sustainable routes',
+          '[SPRING 24] Developed web application to convert user-uploaded images to interactive 3D object models with photogrammetry. Implemented image upload pipeline from client to iOS Object Capture backend and model retrieval from Amazon S3'
+        ]
+      },
+      
     ],
     period: 'Feb 2024 - Apr 2026'
   },

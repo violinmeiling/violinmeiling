@@ -40,7 +40,7 @@ function Ensembles() {
       period: "2016 – 2023",
       role: "Principal second violin (Symphony, 2020 – 2022) / Associate concertmaster (Philharmonic, 2019 – 2020)",
       description:
-        "Served in leadership roles across multiple ensembles. Participated in international tours, chamber performances, and outreach programs. Mentored younger violinists and contributed to organizational outreach and media initiatives.",
+        "Created and delivered yearly promotional presentations for GTCYS. Invited to speak at the 2023 GTCYS Orchestrating Opportunities benefit and 2023 Spring Festival concert. Created social media content and blog posts for GTCYS\'s 2022 Southern Italy Tour. Mentored elementary-age violinists over the pandemic.",
       repertoire: [
         "Symphony No. 5 in D minor, Op. 47 (Dmitri Shostakovich)",
         "Symphony No. 9 in E Minor, Op. 95, B. 178 (Antonin Dvořák)",
