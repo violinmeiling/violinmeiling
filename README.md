@@ -1,6 +1,8 @@
-# Hello
+# Hi
 
-If you're looking for my professional sites, here is my [website](www.violinmeilng.net) and [Linkedin](https://www.linkedin.com/in/meilingmathur/)
+*Applied AI @ RBC, CS @ Penn*
+
+If you're looking for my professional sites, here is my [website](www.violinmeilng.net) and my [Linkedin](https://www.linkedin.com/in/meilingmathur/)
 
 Otherwise, things about me that have nothing to do with getting a job:
 - My favorite tea is earl grey
