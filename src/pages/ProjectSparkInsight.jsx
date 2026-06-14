@@ -59,8 +59,7 @@ function ProjectSparkInsight() {
         </p>
 
         <p>
-          My team and I developed Spark Insight for the 2024 Contrary Gen AI Hackathon hosted at the University of Pennsylvania. Spark Insight is an application that takes in your resume, checks it against available LinkedIn internship opportunities, and creates a visual map of your skillset compared to the jobs that are out there. Imagine yourself as a dot on a graph — dots for jobs that are the closest to your current experiences appear closer to your dot, and jobs that are less related but still applicable show up farther away. Jobs are clustered by fields; so, in my case, I might have a cluster for software, a cluster for business, a cluster for research, and a cluster for education.
-        </p>
+My team and I developed Spark Insight for the 2024 Contrary Gen AI Hackathon hosted at the University of Pennsylvania. Spark Insight is an application that takes in your resume, checks it against available LinkedIn internship opportunities, and creates a visual map of your skillset compared to the jobs that are out there. Imagine yourself as a dot on a graph — dots for jobs that are the closest to your current experiences appear closer to your dot, and jobs that are less related but still applicable show up farther away. Jobs are clustered by fields; so, in my case, I might have a cluster for software, a cluster for business, a cluster for research, and a cluster for education.        </p>
 
         <figure>
           <img
@@ -74,12 +73,10 @@ function ProjectSparkInsight() {
         </p>
 
         <p>
-          Nomic AI, one of the hackathon sponsors, is a startup that’s product takes in unstructured data and uses ML to sort it into categories and produce a graph mapping of said categories. We fed Nomic AI’s product LinkedIn internship data to produce the vector embeddings of the job opportunities. Then, we used an NLP service to extract keywords from a user-uploaded resume, and I wrote a Python backend to connect to Nomic AI, calculate the coordinates of the internship opportunities and user profile, and display the information on an interactive graph. Finally, I built features to filter opportunities by location, salary, work type, etc. and view the original job postings from clicking on the dots.
-        </p>
+Nomic AI, one of the hackathon sponsors, is a startup that’s product takes in unstructured data and uses ML to sort it into categories and produce a graph mapping of said categories. We fed Nomic AI’s product LinkedIn internship data to produce the vector embeddings of the job opportunities. Then, we used an NLP service to extract keywords from a user-uploaded resume, and I wrote a Python backend to connect to Nomic AI, calculate the coordinates of the internship opportunities and user profile, and display the information on an interactive graph. Finally, I built features to filter opportunities by location, salary, work type, etc. and view the original job postings from clicking on the dots.        </p>
 
         <p>
-          This was the first hackathon I’ve ever done, and my team and I were very excited to win Best Rookie Project for our work. From working with my team for (what felt like) 24 hours straight to getting to speak with the founders of Nomic AI about their work, I thoroughly enjoyed the entire experience.
-        </p>
+This was the first hackathon I’ve ever done, and my team and I were very excited to win Best Rookie Project for our work. From working with my team for (what felt like) 24 hours straight to getting to speak with the founders of Nomic AI about their work, I thoroughly enjoyed the entire experience.        </p>
 
         <p>
           Looking for the sequel? Check out my second hackathon project{" "}
