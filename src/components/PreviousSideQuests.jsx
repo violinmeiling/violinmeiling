@@ -1,4 +1,5 @@
 import './PreviousSideQuests.css';
+import { Link } from 'react-router-dom';
 
 function PreviousSideQuests() {
   return (
@@ -9,16 +10,16 @@ function PreviousSideQuests() {
           Life before undergrad...
         </p>
         <div className="sidequest-links">
-          <a href="#highschool" className="sidequest-card" id="highschool">
+          <Link to="/highschool" className="sidequest-card" id="highschool">
             <h3>Tonka</h3>
             <p>Go Skippers!</p>
             <span className="arrow">→</span>
-          </a>
-          <a href="/music" className="sidequest-card" id="music">
+          </Link>
+          <Link to="/music" className="sidequest-card" id="music">
             <h3>Music</h3>
             <p>Why "violinmeiling"?</p>
             <span className="arrow">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

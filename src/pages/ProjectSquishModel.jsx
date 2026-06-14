@@ -1,7 +1,7 @@
 import './ProjectPage.css';
 import SiteBackground from "../components/SiteBackground";
 import ProjectLayout from '../components/ProjectLayout';
-
+import { Link } from 'react-router-dom';
 
 function ProjectSquishModel() {
   return (
@@ -111,7 +111,7 @@ function ProjectSquishModel() {
           start to finish, and I thoroughly enjoyed the process of learning how to delegate development and design tasks,
           scope requirements, and implement features. The development and leadership skills I gained from this project
           served as a foundation for my other projects and inspired me to lead a{" "}
-          <a href="/pages/stride">project of my own</a> with Penn Spark the following semester.
+          <Link to="/pages/stride">project of my own</Link> with Penn Spark the following semester.
         </p>
 
         <hr />

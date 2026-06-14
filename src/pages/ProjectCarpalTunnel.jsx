@@ -1,6 +1,7 @@
 import './ProjectPage.css';
 import SiteBackground from "../components/SiteBackground";
 import ProjectLayout from '../components/ProjectLayout';
+import { Link } from 'react-router-dom';
 
 
 function ProjectCarpalTunnel() {
@@ -175,12 +176,12 @@ function ProjectCarpalTunnel() {
 
         <p>
           Oh, and for those of you who are wondering, I was able to get{" "}
-          <a href="/music">back into violin</a> after I recovered, and I still play frequently in college. This project
+          <Link to="/music">back into violin</Link> after I recovered, and I still play frequently in college. This project
           introduced me to the intersection of machine learning and clinical diagnosis, which inspired me to pursue my
           current position in Penn Medicine’s Advanced Cardiovascular Imaging Lab, where I’m researching the effects of
           weight loss treatment in patients from machine-segmented CT scans. It’s also inspired me to learn more about
           the healthcare industry as a whole and how software can help address challenges like diagnosis and patient
-          safety — check out my most recent hackathon project <a href="/pages/mhp">here</a>.
+          safety — check out my most recent hackathon project <Link to="/pages/mhp">here</Link>.
         </p>
 
         <p>

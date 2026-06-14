@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import './MultiTabSection.css';
+import { Link } from 'react-router-dom';
 
 function MultiTabSection() {
   const [activeTab, setActiveTab] = useState('projects');
@@ -412,25 +413,25 @@ function MultiTabSection() {
         <h4 className="role">{activity.role}</h4>
 
         {activity.link && (
-          <a href={activity.link} className="details-link" target="_blank" rel="noopener noreferrer">
+          <Link to={activity.link} className="details-link" target="_blank" rel="noopener noreferrer">
             Website →
-          </a>
+          </Link>
         )}
 
         {activity.id == 2 && (
           <div className="project-links">
-          <a href={projects[0].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
+          <Link to={projects[0].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
             Dewey
-          </a>
-          <a href={projects[2].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link to={projects[2].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
             Penn Museum
-          </a>
-          <a href={projects[3].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link to={projects[3].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
             Stride
-          </a>
-          <a href={projects[6].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link to={projects[6].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
             SquishModel
-          </a>
+          </Link>
           </div>
         )}
 

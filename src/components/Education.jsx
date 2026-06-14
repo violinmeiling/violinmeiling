@@ -1,5 +1,6 @@
 import './Education.css';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 function Education() {
   const [coursesOpen, setCoursesOpen] = useState(false);
@@ -105,9 +106,9 @@ function Education() {
             We didn't do yearbook quotes, but my school newspaper did let me paint one on a brick on the wall of our English classroom:
             <i> "Life has a way of giving you exactly what you need and nothing more."</i>
           </p>
-          <a href="/highschool" className="read-more-button">
+          <Link to="/highschool" className="read-more-button">
           The secret to my college application →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

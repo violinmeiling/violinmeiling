@@ -1,6 +1,7 @@
 import './ProjectPage.css';
 import SiteBackground from "../components/SiteBackground";
 import ProjectLayout from '../components/ProjectLayout';
+import { Link } from 'react-router-dom';
 
 
 function ProjectSparkInsight() {
@@ -82,7 +83,7 @@ function ProjectSparkInsight() {
 
         <p>
           Looking for the sequel? Check out my second hackathon project{" "}
-          <a href="/pages/mhp">here</a>.
+          <Link to="/pages/mhp">here</Link>.
         </p>
 
         <hr />

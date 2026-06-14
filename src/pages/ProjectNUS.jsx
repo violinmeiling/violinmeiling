@@ -1,6 +1,7 @@
 import './ProjectPage.css';
 import SiteBackground from "../components/SiteBackground";
 import ProjectLayout from '../components/ProjectLayout';
+import { Link } from 'react-router-dom';
 
 
 function ProjectLettuceFarmer() {
@@ -190,7 +191,7 @@ function ProjectLettuceFarmer() {
           a lot to be excited about from start to finish. The machine learning experience and research skills I gained continue to inform
           my current work in Penn Medicine’s Advanced Cardiovascular Imaging Lab, and learning about the importance of sustainability through
           this project inspired me to lead the development of a{" "}
-          <a href="/pages/stride">sustainable transportation</a> app as a Project Manager with Penn Spark the following fall. I hope I’ll be able
+          <Link to="/pages/stride">sustainable transportation</Link> app as a Project Manager with Penn Spark the following fall. I hope I’ll be able
           to intern abroad again, and I’ll definitely be back to visit Singapore soon.
         </p>
 
