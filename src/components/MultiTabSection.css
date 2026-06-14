@@ -260,3 +260,14 @@
 element.style {
     margin-top: 0px;
 }
+
+.multi-tab-section,
+.tab-content,
+.projects-grid,
+.penn-activities,
+.publications-list {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
