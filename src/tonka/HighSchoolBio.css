@@ -1,0 +1,134 @@
+.highschool-header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  padding: 2rem;
+}
+
+/* =========================
+   FIXED BACKGROUND LAYER
+   ========================= */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* =========================
+   STARS (small + real)
+   ========================= */
+.star {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #b88ae6;
+  opacity: 0.6;
+
+  /* THIS is the key fix */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+/* scatter positions */
+.s1  { top: 8%;  left: 12%; opacity: 0.6; }
+.s2  { top: 14%; left: 55%; opacity: 0.25; }
+.s3  { top: 18%; left: 82%; opacity: 0.4; }
+
+.s4  { top: 25%; left: 30%; opacity: 0.35; }
+.s5  { top: 28%; left: 70%; opacity: 0.55; }
+.s6  { top: 32%; left: 10%; opacity: 0.2; }
+
+.s7  { top: 38%; left: 48%; opacity: 0.5; }
+.s8  { top: 41%; left: 88%; opacity: 0.3; }
+.s9  { top: 44%; left: 22%; opacity: 0.45; }
+
+.s10 { top: 52%; left: 60%; opacity: 0.25; }
+.s11 { top: 55%; left: 15%; opacity: 0.6; }
+.s12 { top: 58%; left: 78%; opacity: 0.35; }
+
+.s13 { top: 64%; left: 40%; opacity: 0.5; }
+.s14 { top: 67%; left: 90%; opacity: 0.2; }
+.s15 { top: 70%; left: 25%; opacity: 0.4; }
+
+.s16 { top: 76%; left: 55%; opacity: 0.55; }
+.s17 { top: 80%; left: 8%;  opacity: 0.3; }
+.s18 { top: 83%; left: 72%; opacity: 0.45; }
+
+.s19 { top: 88%; left: 35%; opacity: 0.25; }
+.s20 { top: 91%; left: 62%; opacity: 0.5; }
+.s21 { top: 94%; left: 85%; opacity: 0.3; }
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15);
+  }
+}
+
+/* =========================
+   CATS (Lucide icons)
+   ========================= */
+.cat {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  stroke: #60007a;
+  animation: drift 18s infinite ease-in-out;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(15px, -10px) rotate(8deg); }
+}
+
+/* scatter positions */
+.c1 { top: 12%; left: 20%; animation-duration: 18s; opacity: 0.18; }
+.c2 { top: 22%; left: 78%; animation-duration: 24s; opacity: 0.14; }
+
+.c3 { top: 45%; left: 35%; animation-duration: 28s; opacity: 0.16; }
+.c4 { top: 52%; left: 85%; animation-duration: 20s; opacity: 0.12; }
+
+.c5 { top: 72%; left: 18%; animation-duration: 26s; opacity: 0.15; }
+.c6 { top: 86%; left: 60%; animation-duration: 22s; opacity: 0.13; }
+
+/* =========================
+   CONTENT
+   ========================= */
+.highschool-header-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.highschool-header-name {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #60007a;
+  margin: 0;
+}
+
+.highschool-header-title {
+  color: rgba(96, 0, 122, 0.7);
+  font-size: 1.25rem;
+}

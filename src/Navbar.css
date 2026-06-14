@@ -1,0 +1,87 @@
+.floating-nav {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 9999;
+}
+
+/* Main floating button */
+.nav-fab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: Dosis, sans-serif;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.5rem 0.8rem;
+  color: #60007a;
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+.nav-fab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-fab svg {
+  stroke: #60007a; /* matches your link color theme */
+}
+
+/* Dropdown panel */
+/* Dropdown panel */
+.nav-panel {
+  margin-top: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  /* 🔥 THIS is what you want */
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* open state */
+.nav-panel.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* menu items */
+.nav-panel button {
+  text-align: left;
+
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+
+  border: 1px solid transparent;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  color: #60007a;
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+.nav-panel button:hover {
+  transform: translateX(4px);
+}

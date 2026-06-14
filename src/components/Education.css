@@ -1,0 +1,111 @@
+.education {
+  padding: 2rem 6vw;
+  background: transparent;
+}
+
+.education h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #000;
+  text-align: left;
+}
+
+.education-card {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-sizing: border-box;
+}
+
+.education-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.25rem 0;
+}
+
+.education-card h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+}
+
+.graduation,
+.gpa {
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.concentration,
+.activities-intro,
+.quote-intro {
+  color: #444;
+  line-height: 1.7;
+  margin: 0.5rem 0;
+}
+
+.brick-quote {
+  font-style: italic;
+  color: #000;
+  font-size: 1.05rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+  margin: 0.75rem 0;
+}
+
+.read-more-button {
+  font-family: 'Dosis', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  margin-left: -0.25rem;
+}
+
+.details-link {
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.coursework-toggle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #60007A;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.coursework-toggle:hover {
+  opacity: 0.7;
+}
+
+.coursework-list {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.coursework-list li {
+  color: #444;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.coursework-list li::before {
+  content: "—";
+  position: absolute;
+  left: -1rem;
+  color: #aaa;
+}

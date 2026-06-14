@@ -1,0 +1,84 @@
+.hs-organizations {
+  padding: 2rem 6vw;
+}
+
+.hs-organizations h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #000;
+}
+
+.organizations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.organization-card {
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid #eee;
+  background: white;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.organization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.organization-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.organization-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.period {
+  color: #555;
+  font-size: .95rem;
+}
+
+.role {
+  margin: .35rem 0 .75rem 0;
+  color: #555;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: .5rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlights li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #aaa;
+}
+
+.breezes-link {
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,195 @@
+/* =========================
+   PROJECT PAGE (MINIMAL EDITORIAL)
+   ========================= */
+
+.project-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 6vw 4rem 6vw;
+  background: transparent;
+  color: #000;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+
+/* Header */
+.project-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.project-header h1,
+.project-header p,
+.project-header .project-tags {
+  position: relative;
+  z-index: 1;
+}
+
+.project-header h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.project-meta {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+/* =========================
+   TAGS (outlined system)
+   ========================= */
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.project-tags .tag {
+  background: none;
+  border: 1px solid #60007A;
+  color: #60007A;
+
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border-radius: 4px;
+}
+
+/* IMPORTANT: remove old separator system */
+.project-tags .tag::after {
+  content: "";
+}
+
+
+/* =========================
+   LINKS (global project page links)
+   ========================= */
+
+.project-link {
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* optional: keep links consistent inside body too */
+.project-content a {
+  color: #60007A;
+  text-decoration: underline;
+}
+
+/* Content */
+.project-content {
+  line-height: 1.75;
+  margin: 0;
+}
+
+.project-content h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 2rem 0 1rem 0;
+  color: #000;
+}
+
+.project-content p {
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.project-content p.caption {
+  font-size: 0.9rem;
+  color: #777;
+  /* center captions */
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Images */
+.project-content img {
+  max-width: 100%;
+  display: block;
+  margin: 1.5rem 0;
+  /* center the images on the page */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lists */
+.project-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.project-content li {
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+  color: #444;
+  position: relative;
+}
+
+.project-content li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #aaa;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 1rem; 
+  /*margin-top: 2rem;*/
+}
+
+.project-link {
+  color: #60007A;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Hover system (unified) */
+.project-card,
+.experience-card,
+.education-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  padding: 1.75rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.project-card:hover *,
+.experience-card:hover *,
+.education-card:hover * {
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-header h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,119 @@
+/* =========================
+   MULTI TAB SECTION
+   ========================= */
+
+.multi-tab-section {
+  padding: 2rem 2rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #60007A;
+  background: white;
+  color: #60007A;
+  border-radius: 8px;
+  font-family: 'Dosis', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button:hover {
+  background: #f0f0ff;
+}
+
+.tab-buttons button.active {
+  background: #60007A;
+  color: white;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+/* =========================
+   PROJECTS GRID
+   ========================= */
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   SHARED "EDITORIAL CARD" STYLE
+   ========================= */
+
+.award-card,
+.publication-card,
+.activity-card {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  background: white;
+
+  /* IMPORTANT: no shadow at rest */
+  box-shadow: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.award-card:hover,
+.publication-card:hover,
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+/* =========================
+   MUSIC / REPERTOIRE CARDS
+   (fixed + consistent hover)
+   ========================= */
+
+.music-card {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  background: white;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+/* smaller typography ONLY for music */
+.music-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.25rem 0;
+}
+
+.music-card .composer {
+  font-size: 0.9rem;
+  color: #555;
+}
+

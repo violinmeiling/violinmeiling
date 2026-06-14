@@ -1,0 +1,70 @@
+.music-card {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-sizing: border-box;
+}
+
+
+
+.music-card:hover {
+  opacity: 0.85;
+}
+
+.music-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.music-card h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.music-year {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.music-award {
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.tag {
+  background: none;
+  color: #555;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.excerpt {
+  color: #444;
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.details-link {
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}

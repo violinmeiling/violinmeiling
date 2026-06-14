@@ -1,0 +1,103 @@
+.work-experience {
+  padding: 2rem 6vw;
+  background: transparent;
+}
+
+.work-experience h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #000;
+  text-align: left;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Card */
+.experience-card {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-sizing: border-box;
+}
+
+/* Header */
+.company-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.total-duration,
+.location,
+.period,
+.duration {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+/* Positions */
+.positions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.position {
+  margin-bottom: 0.75rem;
+}
+
+.position:last-child {
+  margin-bottom: 0;
+}
+
+.position-content h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.25rem 0;
+}
+
+/* bullets */
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlights li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #aaa;
+}
+
+.details-link {
+  color: #60007A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}

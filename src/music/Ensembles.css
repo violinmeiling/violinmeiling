@@ -1,0 +1,174 @@
+/* =========================
+   WORK EXPERIENCE (CARD SYSTEM)
+   UPDATED UNIFIED STYLE
+   ========================= */
+
+.ensembles {
+  padding: 2rem 6vw;
+  background: transparent;
+  margin-bottom: 4rem;
+
+}
+
+.ensembles h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #000;
+  text-align: left;
+}
+
+/* shared list container */
+.ensembles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* =========================
+   CARD (shared pattern)
+   ========================= */
+
+.ensemble-card {
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid #eee;
+  background: white; /* important for shadow visibility */
+  box-sizing: border-box;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.ensemble-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   HEADER (company / ensemble)
+   ========================= */
+
+.ensemble-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.ensemble {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+/* shared meta text */
+.location,
+.period,
+.duration,
+.total-duration {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+/* optional role line */
+.role {
+  font-size: 1rem;
+  color: #111;
+  margin: 0.35rem 0 0.25rem 0;
+  font-weight: 400;
+}
+
+/* organization line (used in ensembles) */
+.organization {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.15rem 0 0.5rem 0;
+}
+
+/* =========================
+   POSITIONS / SUB-ROLES
+   ========================= */
+
+.positions-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.position {
+  margin-bottom: 0.85rem;
+}
+
+.position:last-child {
+  margin-bottom: 0;
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.position-content h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+/* =========================
+   BODY TEXT / DETAILS
+   ========================= */
+
+.period {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+/* descriptions (used in ensembles) */
+.description {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+/* =========================
+   BULLETS (highlights / repertoire)
+   ========================= */
+
+.highlights,
+.repertoire ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.highlights li,
+.repertoire li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlights li::before,
+.repertoire li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #aaa;
+}
+
+/* repertoire section header */
+.repertoire h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.75rem 0 0.25rem 0;
+  color: #000;
+}

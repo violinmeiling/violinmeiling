@@ -1,0 +1,20 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    padding: 0 1rem;
+  }
+}
