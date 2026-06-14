@@ -15,6 +15,8 @@ import Music from "./music/Music";
 import HighSchool from "./tonka/HighSchool";
 import Navbar from "./Navbar";
 import "./App.css";
+import Layout from "./components/Layout";
+
 
 function ScrollManager() {
   const location = useLocation();
@@ -36,6 +38,7 @@ function App() {
         <Navbar />
 
         <Routes>
+          <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/pages/blue" element={<ProjectBlue />} />
           <Route path="/pages/stride" element={<ProjectStride />} />
@@ -48,6 +51,7 @@ function App() {
           <Route path="/pages/chatbot" element={<ProjectChatbot />} />
           <Route path="/music" element={<Music />} />
           <Route path="/highschool" element={<HighSchool />} />
+          </Route>
         </Routes>
       </div>
     </HashRouter>

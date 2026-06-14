@@ -361,12 +361,12 @@ function MultiTabSection() {
       description: 'The Daily Pennsylvanian\'s Arts and Culture Magazine, serving an audience of over 40,000 readers'
     },
     {
-      id: 2,
-      title: 'Minnetonka Breezes',
-      publication: 'Deputy Editor, Arts and Entertainment',
-      date: '2021 - 2023',
-      link: 'https://www.minnetonkabreezes.com/staff_name/meiling-mathur/',
-      description: 'Minnetonka High School\'s student newspaper'
+      id: 4,
+      title: 'White Paper 2025',
+      publication: 'Student Committee on Undergraduate Education',
+      date: 'February 2025',
+      link: 'http://pennspark.substack.com/',
+      description: 'SCUE\'s educational policy recommendations for Penn\'s administration, compiling five years of research, stakeholder collaboration, and input from Penn\'s student body. As DEI Committee Chair, I included my research on and recommendations to address socioeconomic disparities across campus. Definitely a privelige to have been on this project'
     },
     {
       id: 3,
@@ -375,7 +375,17 @@ function MultiTabSection() {
       date: '2024 - 2026',
       link: 'http://pennspark.substack.com/',
       description: 'Penn Spark\'s alumni and student newsletter of over 700 readers. It was sitting dormant for a few years, so I decided it was high time to revive it'
-    }
+    },
+    {
+      id: 2,
+      title: 'Minnetonka Breezes',
+      publication: 'Deputy Editor, Arts and Entertainment',
+      date: '2021 - 2023',
+      link: 'https://www.minnetonkabreezes.com/staff_name/meiling-mathur/',
+      description: 'Minnetonka High School\'s student newspaper'
+    },
+    
+    
   ];
 
 
