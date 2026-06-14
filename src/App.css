@@ -18,3 +18,9 @@ section {
     padding: 0 1rem;
   }
 }
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
