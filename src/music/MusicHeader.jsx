@@ -1,10 +1,32 @@
 import "./MusicHeader.css";
-import { Cat } from "lucide-react";
+import { Cat, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function MusicHeader() {
+  const [showHint, setShowHint] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setShowHint(true);
+    }, 1500);
+
+    const onScroll = () => {
+      setIsAtTop(window.scrollY < 10);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const shouldShowArrow = showHint && isAtTop;
+
   return (
     <section className="music-header" id="music-header">
-      {/* fixed decorative background */}
       <div className="site-bg">
         {/* stars */}
         <div className="star s1" />
@@ -42,6 +64,10 @@ function MusicHeader() {
         <p className="music-header-title">
           once upon a time, this software developer wanted to go into music, so they bought the domain “violinmeiling” to use as their professional website. eventually, the software developer got older and decided to shift their focus toward other pursuits, so “violinmeiling” became a tech portfolio instead — with the story of how we got here.
         </p>
+      </div>
+
+      <div className={`scroll-hint ${shouldShowArrow ? "show" : ""}`}>
+        <ChevronDown className="scroll-arrow" />
       </div>
     </section>
   );

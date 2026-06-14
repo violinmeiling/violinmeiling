@@ -7,22 +7,19 @@ function About() {
       <div className="section-content">
         <h2>About me</h2>
         <p className="about-blurb">
-          Hi, I’m Meiling, a software developer studying Computer and Information Science 
+          Hi, I’m Meiling, a software developer studying Computer Science 
           at the University of Pennsylvania. I enjoy tackling problems of all kinds, 
           from using <Link to="/pages/nus" className="details-link">computer vision</Link> to help aquaponics farms keep their lettuce plants alive 
           to writing code that can turn your <Link to="/pages/squishmodel" className="details-link">stuffed animals</Link> into interactive 3D browser objects. 
-          My head is quite literally in the clouds 24/7 because I’m often thinking about how to 
-          launch high-altitude balloons into the sky to gather data for my aerospace research.
+          My head is quite literally in the clouds 24/7 from launching high-altitude balloons around the Delaware Valley.
           <br /><br />
-          I’m passionate about leveraging the intersection of software and entrepreneurship to 
-          do good for others, specifically by developing products that can transform the way we 
-          interact with finance, <Link to="/pages/mhp" className="details-link">healthcare</Link>, and <Link to="/pages/stride" className="details-link">sustainability</Link>. When I’m not working on my 
-          engineering projects, you can usually find me drafting educational policy recommendations 
-          for Penn’s administration, <Link to="/music" className="details-link">rehearsing with my string quartet</Link>, or teaching Philadelphia 
-          high schoolers Materials Science on the weekends.
+          I’m passionate about creating technology that can
+          do good for others, specifically by developing products that transform the way we 
+          interact with finance, <Link to="/pages/mhp" className="details-link">healthcare</Link>, and <Link to="/pages/stride" className="details-link">sustainability</Link>. 
+          When I’m not tinkering with code, you can usually find me befriending startup founders, <Link to="/music" className="details-link">writing songs</Link>, or rehearsing with my dance troupe.
           <br /><br />
           Please feel free to explore my work and find me on Linkedin; 
-          I would love to connect with you!
+          I would love to connect with you.
         </p>
         <div className="social-links">
           <a 

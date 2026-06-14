@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './HighSchoolAwardsCourses.css';
 
 function HighSchoolAwardsCourses() {
   const [activeTab, setActiveTab] = useState('awards');
+  const sectionRef = useRef(null);
+
+  const scrollToTop = () => {
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [activeTab]);
 
   const awards = [
     {
@@ -76,7 +85,7 @@ function HighSchoolAwardsCourses() {
   ];
 
   return (
-    <section className="hs-tabs">
+    <section className="hs-tabs" ref={sectionRef}>
       <div className="section-content">
 
         <div className="tab-buttons">
@@ -126,6 +135,23 @@ function HighSchoolAwardsCourses() {
         )}
 
       </div>
+
+      <div className="bottom-tab-bar">
+        <button
+          className={activeTab === 'awards' ? 'active' : ''}
+          onClick={() => setActiveTab('awards')}
+        >
+          Awards
+        </button>
+
+        <button
+          className={activeTab === 'courses' ? 'active' : ''}
+          onClick={() => setActiveTab('courses')}
+        >
+          Coursework
+        </button>
+      </div>
+
     </section>
   );
 }

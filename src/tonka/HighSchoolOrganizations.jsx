@@ -89,14 +89,12 @@ function HighSchoolOrganizations() {
     {
       name: 'Minnesota State High School Mathematics League',
       period: '2020 – 2021',
-      role: 'Competitor',
-      description: []
+      description: ["Competed at regional and state-level math competitions"]
     },
     {
       name: 'Minnesota Regional High School Science Bowl',
       period: '2019 – 2021',
-      role: 'Competitor',
-      description: []
+      description: ["Competed in the Minnesota Regional High School Science Bowl"]
     }
   ];
 

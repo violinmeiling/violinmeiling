@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: 19px;
+  font-size: 14px;
 }
 
 body {
@@ -54,21 +54,21 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 51px;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 31px;
     margin: 20px 0;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 19px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 p {
@@ -84,7 +84,7 @@ code,
 }
 
 code {
-  font-size: 15px;
+  font-size: 10px;
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);

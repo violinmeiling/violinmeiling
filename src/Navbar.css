@@ -1,7 +1,7 @@
 .floating-nav {
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 24px;
+  left: 24px;
   z-index: 9999;
 }
 
@@ -9,15 +9,18 @@
 .nav-fab {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
+  gap: 0.6rem;
+
+  font-size: 1.15rem;
+
   font-family: Dosis, sans-serif;
   background: white;
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 0.5rem 0.8rem;
-  color: #60007a;
+
+  padding: 0.75rem 1.1rem;   /* ⬆️ bigger button */
   border-radius: 999px;
 
+  color: #60007a;
   cursor: pointer;
 }
 
@@ -27,7 +30,9 @@
 }
 
 .nav-fab svg {
-  stroke: #60007a; /* matches your link color theme */
+  stroke: #60007a;
+  width: 20px;
+  height: 20px;
 }
 
 /* Dropdown panel */
@@ -49,8 +54,8 @@
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
 
-  padding: 0.6rem;
-  border-radius: 12px;
+  padding: 0.8rem;
+  border-radius: 14px;
   border: 1px solid rgba(0, 0, 0, 0.08);
 
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
@@ -67,14 +72,14 @@
 .nav-panel button {
   text-align: left;
 
-  padding: 0.5rem 0.75rem;
+  padding: 0.65rem 0.9rem;
   border-radius: 10px;
 
   border: 1px solid transparent;
   background: transparent;
 
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.05rem;
 
   color: #60007a;
   cursor: pointer;
@@ -83,5 +88,25 @@
 }
 
 .nav-panel button:hover {
-  transform: translateX(4px);
+  transform: translateX(6px);
+}
+
+.nav-fab.glow {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(96, 0, 122, 0.4);
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(96, 0, 122, 0.0);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 18px rgba(96, 0, 122, 0.55);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(96, 0, 122, 0.0);
+  }
 }

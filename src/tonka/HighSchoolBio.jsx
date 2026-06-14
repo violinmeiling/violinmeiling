@@ -1,10 +1,34 @@
 import "./HighSchoolBio.css";
-import { Cat } from "lucide-react";
+import { Cat, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function HighSchoolBio() {
+  const [showHint, setShowHint] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    // delay appearance
+    const t = setTimeout(() => {
+      setShowHint(true);
+    }, 1500);
+
+    // track scroll position
+    const onScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const shouldShowArrow = showHint && isAtTop;
+
   return (
     <section className="highschool-header" id="highschool-header">
-      {/* fixed decorative background */}
       <div className="site-bg">
         {/* stars */}
         <div className="star s1" />
@@ -39,13 +63,15 @@ function HighSchoolBio() {
       </div>
 
       <div className="highschool-header-content">
-        <p className="highschool-header-name">
-            Minnetonka High School
-        </p>
+        <p className="highschool-header-name">Minnetonka High School</p>
+        <p className="highschool-header-title">2019 - 2023</p>
         <p className="highschool-header-title">
-          2019 - 2023
+          GPA: 4.65 | Summa cum laude
         </p>
-        <p className = "highschool-header-title">GPA: 4.65 | Summa cum laude</p>
+      </div>
+
+      <div className={`scroll-hint ${shouldShowArrow ? "show" : ""}`}>
+        <ChevronDown className="scroll-arrow" />
       </div>
     </section>
   );

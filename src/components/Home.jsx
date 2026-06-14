@@ -8,6 +8,7 @@ import MultiTabSection from "./MultiTabSection";
 import PreviousSideQuests from "./PreviousSideQuests";
 import { useLocation } from "react-router-dom";
 import { getScroll } from "./scrollMemory";
+import useRevealOnScroll from "./useRevealOnScroll";
 
 function Home() {
   const [showHero, setShowHero] = useState(false);
@@ -15,15 +16,20 @@ function Home() {
   const [showExplore, setShowExplore] = useState(false);
 
   // refs for scroll reveal sections
-  const educationRef = useRef(null);
-  const workRef = useRef(null);
-  const multiTabRef = useRef(null);
-  const questsRef = useRef(null);
+ // const educationRef = useRef(null);
+  //const workRef = useRef(null);
+  //const multiTabRef = useRef(null);
+  //const questsRef = useRef(null);
 
-  const [eduVisible, setEduVisible] = useState(false);
-  const [workVisible, setWorkVisible] = useState(false);
-  const [multiVisible, setMultiVisible] = useState(false);
-  const [questsVisible, setQuestsVisible] = useState(false);
+  //const [eduVisible, setEduVisible] = useState(false);
+ // const [workVisible, setWorkVisible] = useState(false);
+  //const [multiVisible, setMultiVisible] = useState(false);
+  //const [questsVisible, setQuestsVisible] = useState(false);
+
+  const [educationRef, eduVisible] = useRevealOnScroll();
+const [workRef, workVisible] = useRevealOnScroll();
+const [multiTabRef, multiVisible] = useRevealOnScroll();
+const [questsRef, questsVisible] = useRevealOnScroll();
 
   const location = useLocation();
 

@@ -1,10 +1,32 @@
 import "./Hero.css";
-import { Cat } from "lucide-react";
+import { Cat, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function Hero() {
+  const [showHint, setShowHint] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setShowHint(true);
+    }, 1500);
+
+    const onScroll = () => {
+      setIsAtTop(window.scrollY < 10);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const shouldShowArrow = showHint && isAtTop;
+
   return (
     <section className="hero" id="hero">
-      {/* fixed decorative background */}
       <div className="site-bg">
         {/* stars */}
         <div className="star s1" />
@@ -43,6 +65,10 @@ function Hero() {
         <p className="hero-title">
           developer and violinist, among other things
         </p>
+      </div>
+
+      <div className={`scroll-hint ${shouldShowArrow ? "show" : ""}`}>
+        <ChevronDown className="scroll-arrow" />
       </div>
     </section>
   );

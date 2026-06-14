@@ -117,3 +117,42 @@
   color: #555;
 }
 
+
+
+.bottom-tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 0.75rem 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+
+  border-top: 1px solid #eee;
+  bottom: 0;
+  z-index: 100;
+}
+
+.bottom-tab-bar button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  font-family: 'Dosis', sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+
+.bottom-tab-bar button.active {
+  color: #60007A;
+}
+
+.bottom-tab-bar button.active::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #60007A;
+}

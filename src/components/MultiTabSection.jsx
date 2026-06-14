@@ -1,10 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import './MultiTabSection.css';
 import { Link } from 'react-router-dom';
 
 function MultiTabSection() {
   const [activeTab, setActiveTab] = useState('projects');
+  const tabRef = useRef(null);
+  const hasMounted = useRef(false);
+
+  // ✅ FIX: scroll AFTER tab changes (not inside click handler)
+  useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return;
+    }
+
+    const el = document.getElementById('tabs');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [activeTab]);
 
   const projects = [
     {
@@ -66,7 +81,6 @@ function MultiTabSection() {
       tags: ['Python', 'Computer vision', 'GANs', 'Neural networks', 'Machine learning'],
       award: 'Research Intern, National University of Singapore',
     },
-    
     {
       id: 7,
       title: 'SquishModel',
@@ -125,7 +139,7 @@ function MultiTabSection() {
     }
   ];
 
-  const pennActivities = [
+  const pennActivities =[
   {
     id: 1,
     title: 'Penn Aerospace Club',
@@ -337,7 +351,6 @@ function MultiTabSection() {
     period: 'Apr 2026 · 1 mo'
   }
 ];
-
   const publications = [
     {
       id: 1,
@@ -365,28 +378,28 @@ function MultiTabSection() {
     }
   ];
 
+
   return (
-    <section className="multi-tab-section" id="tabs">
+    <section className="multi-tab-section" id="tabs" ref={tabRef}>
       <div className="section-content">
         <div className="tab-buttons">
-          <button 
+          <button
             className={activeTab === 'projects' ? 'active' : ''}
             onClick={() => setActiveTab('projects')}
-            data-tab="projects"
           >
             Projects
           </button>
-          <button 
+
+          <button
             className={activeTab === 'penn' ? 'active' : ''}
             onClick={() => setActiveTab('penn')}
-            data-tab="penn"
           >
             Penn
           </button>
-          <button 
+
+          <button
             className={activeTab === 'publications' ? 'active' : ''}
             onClick={() => setActiveTab('publications')}
-            data-tab="publications"
           >
             Writing
           </button>
@@ -402,54 +415,50 @@ function MultiTabSection() {
           )}
 
           {activeTab === 'penn' && (
-  <div className="penn-activities">
-    {pennActivities.map(activity => (
-      <div key={activity.id} className="activity-card">
-        <div className="activity-header">
-          <h3>{activity.title}</h3>
-          <span className="period">{activity.period}</span>
-        </div>
+            <div className="penn-activities">
+              {pennActivities.map(activity => (
+                <div key={activity.id} className="activity-card">
+                  <div className="activity-header">
+                    <h3>{activity.title}</h3>
+                    <span className="period">{activity.period}</span>
+                  </div>
 
-        <h4 className="role">{activity.role}</h4>
+                  <h4 className="role">{activity.role}</h4>
 
-        {activity.link && (
-          <Link to={activity.link} className="details-link" target="_blank" rel="noopener noreferrer">
-            Website →
-          </Link>
-        )}
+                  {activity.link && (
+                    <Link
+                      to={activity.link}
+                      className="details-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Website →
+                    </Link>
+                  )}
 
-        {activity.id == 2 && (
-          <div className="project-links">
-          <Link to={projects[0].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
-            Dewey
-          </Link>
-          <Link to={projects[2].externalLink} className="project-details-link" target="_blank" rel="noopener noreferrer">
-            Penn Museum
-          </Link>
-          <Link to={projects[3].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
-            Stride
-          </Link>
-          <Link to={projects[6].link} className="project-details-link" target="_blank" rel="noopener noreferrer">
-            SquishModel
-          </Link>
-          </div>
-        )}
+                  {activity.id == 2 && (
+                    <div className="project-links">
+                      <Link to={projects[0].externalLink}>Dewey</Link>
+                      <Link to={projects[2].externalLink}>Penn Museum</Link>
+                      <Link to={projects[3].link}>Stride</Link>
+                      <Link to={projects[6].link}>SquishModel</Link>
+                    </div>
+                  )}
 
-        {activity.description.map((block, i) => (
-          <div key={i} className="activity-section">
-            {block.section && <h5>{block.section}</h5>}
-
-            <ul>
-              {block.bullets.map((bullet, j) => (
-                <li key={j}>{bullet}</li>
+                  {activity.description.map((block, i) => (
+                    <div key={i} className="activity-section">
+                      {block.section && <h5>{block.section}</h5>}
+                      <ul>
+                        {block.bullets.map((bullet, j) => (
+                          <li key={j}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    ))}
-  </div>
-)}
+            </div>
+          )}
 
           {activeTab === 'publications' && (
             <div className="publications-list">
@@ -461,9 +470,9 @@ function MultiTabSection() {
                     <span className="pub-date">{pub.date}</span>
                   </div>
                   <p>{pub.description}</p>
-                  <a 
-                    href={pub.link} 
-                    target="_blank" 
+                  <a
+                    href={pub.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="read-more"
                   >
@@ -474,6 +483,29 @@ function MultiTabSection() {
             </div>
           )}
         </div>
+      </div>
+
+      <div className="bottom-tab-bar">
+        <button
+          className={activeTab === 'projects' ? 'active' : ''}
+          onClick={() => setActiveTab('projects')}
+        >
+          Projects
+        </button>
+
+        <button
+          className={activeTab === 'penn' ? 'active' : ''}
+          onClick={() => setActiveTab('penn')}
+        >
+          Penn
+        </button>
+
+        <button
+          className={activeTab === 'publications' ? 'active' : ''}
+          onClick={() => setActiveTab('publications')}
+        >
+          Writing
+        </button>
       </div>
     </section>
   );

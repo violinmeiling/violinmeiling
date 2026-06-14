@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './MusicTabs.css';
 
 function MusicTabs() {
   const [activeTab, setActiveTab] = useState('awards');
+  const sectionRef = useRef(null);
+
+  const scrollToTop = () => {
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [activeTab]);
 
   const awards = [
     {
@@ -51,10 +60,10 @@ function MusicTabs() {
   ];
 
   return (
-    <section className="multi-tab-section" id="tabs">
+    <section className="multi-tab-section" ref={sectionRef}>
       <div className="section-content">
 
-        {/* TABS */}
+        {/* TOP TABS */}
         <div className="tab-buttons">
           <button
             className={activeTab === 'awards' ? 'active' : ''}
@@ -74,7 +83,6 @@ function MusicTabs() {
         {/* CONTENT */}
         <div className="tab-content">
 
-          {/* AWARDS */}
           {activeTab === 'awards' && (
             <div className="awards-grid">
               {awards.map((award) => (
@@ -100,7 +108,6 @@ function MusicTabs() {
             </div>
           )}
 
-          {/* REPERTOIRE */}
           {activeTab === 'repertoire' && (
             <div className="repertoire-list">
               {pieces.map((piece) => (
@@ -118,6 +125,23 @@ function MusicTabs() {
           )}
 
         </div>
+      </div>
+
+      {/* BOTTOM TABS */}
+      <div className="bottom-tab-bar">
+        <button
+          className={activeTab === 'awards' ? 'active' : ''}
+          onClick={() => setActiveTab('awards')}
+        >
+          Awards
+        </button>
+
+        <button
+          className={activeTab === 'repertoire' ? 'active' : ''}
+          onClick={() => setActiveTab('repertoire')}
+        >
+          Repertoire
+        </button>
       </div>
     </section>
   );
