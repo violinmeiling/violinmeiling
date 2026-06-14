@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom"
+import { useEffect } from "react";
+
 import Home from "./components/Home";
 import ProjectBlue from "./pages/ProjectBlue";
 import ProjectStride from "./pages/ProjectStride";
@@ -9,13 +11,10 @@ import ProjectSparkInsight from "./pages/ProjectSparkInsight";
 import ProjectHARK from "./pages/ProjectHARK";
 import ProjectCarpalTunnel from "./pages/ProjectCarpalTunnel";
 import ProjectChatbot from "./pages/ProjectChatbot";
-import "./App.css";
-import Navbar from "./Navbar";
 import Music from "./music/Music";
 import HighSchool from "./tonka/HighSchool";
-
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import Navbar from "./Navbar";
+import "./App.css";
 
 function ScrollManager() {
   const location = useLocation();
@@ -31,11 +30,10 @@ function ScrollManager() {
 
 function App() {
   return (
-    <Router>
-
+    <HashRouter>
       <div className="app">
         <ScrollManager />
-      <Navbar />
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -52,7 +50,7 @@ function App() {
           <Route path="/highschool" element={<HighSchool />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
